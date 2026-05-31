@@ -1,7 +1,9 @@
 name: Build Android APK
+
 on:
   push:
-    branches: [ main ] # Change this to "master" if your repository's main branch is called master
+    branches:
+      - main
 
 jobs:
   build:
@@ -26,4 +28,3 @@ jobs:
 
       - name: Build Preview APK
         run: npx eas-cli build --platform android --profile preview --non-interactive
-
